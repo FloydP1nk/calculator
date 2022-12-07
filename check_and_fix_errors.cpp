@@ -12,8 +12,11 @@ std::string check_and_fix(std::string input_exp) {
         }
     }
     if (input_exp[0] == '-') { // Если самый первый символ '-'
+        input_exp.erase(0, 1);
         input_exp.insert(0, 1, '(');
         input_exp.insert(1, 1, '0');
+        input_exp.insert(2, 1, '-');
+        input_exp.insert(3, 1, '1');
         input_exp.insert(4, 1, ')');
     }
     int OpenBracketCount = 0, CloseBracketCount = 0; //Счетчики скобок

@@ -21,7 +21,4 @@ std::string trig_calc(std::string input_exp);
 std::string convert(std::string input_exp);
 double result_calc(std::string input_exp);
 
-
-
-
 #endif //CALCULATOR_HEADER_HPP

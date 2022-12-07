@@ -36,7 +36,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/pavelerokhin/CLionProjects/calculator/cmake-build-debug/
+cmake_ninja_workdir = /Users/pavelerokhin/calculator/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target calculator
 
@@ -46,31 +46,25 @@ cmake_ninja_workdir = /Users/pavelerokhin/CLionProjects/calculator/cmake-build-d
 
 build cmake_object_order_depends_target_calculator: phony || CMakeFiles/calculator.dir
 
-build CMakeFiles/calculator.dir/main.cpp.o: CXX_COMPILER__calculator_Debug /Users/pavelerokhin/CLionProjects/calculator/main.cpp || cmake_object_order_depends_target_calculator
+build CMakeFiles/calculator.dir/main.cpp.o: CXX_COMPILER__calculator_Debug /Users/pavelerokhin/calculator/main.cpp || cmake_object_order_depends_target_calculator
   DEP_FILE = CMakeFiles/calculator.dir/main.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++2b
   OBJECT_DIR = CMakeFiles/calculator.dir
   OBJECT_FILE_DIR = CMakeFiles/calculator.dir
 
-build CMakeFiles/calculator.dir/convert_to_reverse_polish_notation.cpp.o: CXX_COMPILER__calculator_Debug /Users/pavelerokhin/CLionProjects/calculator/convert_to_reverse_polish_notation.cpp || cmake_object_order_depends_target_calculator
+build CMakeFiles/calculator.dir/convert_to_reverse_polish_notation.cpp.o: CXX_COMPILER__calculator_Debug /Users/pavelerokhin/calculator/convert_to_reverse_polish_notation.cpp || cmake_object_order_depends_target_calculator
   DEP_FILE = CMakeFiles/calculator.dir/convert_to_reverse_polish_notation.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++2b
   OBJECT_DIR = CMakeFiles/calculator.dir
   OBJECT_FILE_DIR = CMakeFiles/calculator.dir
 
-build CMakeFiles/calculator.dir/check_and_fix_errors.cpp.o: CXX_COMPILER__calculator_Debug /Users/pavelerokhin/CLionProjects/calculator/check_and_fix_errors.cpp || cmake_object_order_depends_target_calculator
+build CMakeFiles/calculator.dir/check_and_fix_errors.cpp.o: CXX_COMPILER__calculator_Debug /Users/pavelerokhin/calculator/check_and_fix_errors.cpp || cmake_object_order_depends_target_calculator
   DEP_FILE = CMakeFiles/calculator.dir/check_and_fix_errors.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++2b
   OBJECT_DIR = CMakeFiles/calculator.dir
   OBJECT_FILE_DIR = CMakeFiles/calculator.dir
 
-build CMakeFiles/calculator.dir/trigonometry_calculation.cpp.o: CXX_COMPILER__calculator_Debug /Users/pavelerokhin/CLionProjects/calculator/trigonometry_calculation.cpp || cmake_object_order_depends_target_calculator
-  DEP_FILE = CMakeFiles/calculator.dir/trigonometry_calculation.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++2b
-  OBJECT_DIR = CMakeFiles/calculator.dir
-  OBJECT_FILE_DIR = CMakeFiles/calculator.dir
-
-build CMakeFiles/calculator.dir/result_calculation.cpp.o: CXX_COMPILER__calculator_Debug /Users/pavelerokhin/CLionProjects/calculator/result_calculation.cpp || cmake_object_order_depends_target_calculator
+build CMakeFiles/calculator.dir/result_calculation.cpp.o: CXX_COMPILER__calculator_Debug /Users/pavelerokhin/calculator/result_calculation.cpp || cmake_object_order_depends_target_calculator
   DEP_FILE = CMakeFiles/calculator.dir/result_calculation.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++2b
   OBJECT_DIR = CMakeFiles/calculator.dir
@@ -84,7 +78,7 @@ build CMakeFiles/calculator.dir/result_calculation.cpp.o: CXX_COMPILER__calculat
 #############################################
 # Link the executable calculator
 
-build calculator: CXX_EXECUTABLE_LINKER__calculator_Debug CMakeFiles/calculator.dir/main.cpp.o CMakeFiles/calculator.dir/convert_to_reverse_polish_notation.cpp.o CMakeFiles/calculator.dir/check_and_fix_errors.cpp.o CMakeFiles/calculator.dir/trigonometry_calculation.cpp.o CMakeFiles/calculator.dir/result_calculation.cpp.o
+build calculator: CXX_EXECUTABLE_LINKER__calculator_Debug CMakeFiles/calculator.dir/main.cpp.o CMakeFiles/calculator.dir/convert_to_reverse_polish_notation.cpp.o CMakeFiles/calculator.dir/check_and_fix_errors.cpp.o CMakeFiles/calculator.dir/result_calculation.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
   OBJECT_DIR = CMakeFiles/calculator.dir
   POST_BUILD = :
@@ -97,7 +91,7 @@ build calculator: CXX_EXECUTABLE_LINKER__calculator_Debug CMakeFiles/calculator.
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/pavelerokhin/CLionProjects/calculator/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/pavelerokhin/calculator/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -108,7 +102,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/pavelerokhin/CLionProjects/calculator/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/pavelerokhin/CLionProjects/calculator -B/Users/pavelerokhin/CLionProjects/calculator/cmake-build-debug
+  COMMAND = cd /Users/pavelerokhin/calculator/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/pavelerokhin/calculator -B/Users/pavelerokhin/calculator/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -124,7 +118,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /Users/pavelerokhin/CLionProjects/calculator/cmake-build-debug
+# Folder: /Users/pavelerokhin/calculator/cmake-build-debug
 
 build all: phony calculator
 
