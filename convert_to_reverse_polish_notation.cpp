@@ -3,6 +3,8 @@
 //
 #include "header.hpp"
 
+#include "header.hpp"
+
 std::string convert(std::string input_exp) {
     std::stack<operations> stack_oper; // Стек для мат операций
     std::string output_exp;
@@ -29,7 +31,7 @@ std::string convert(std::string input_exp) {
                                            symbolFromExp.priority)) { //Если stack_oper пуст, или приоритет операции в стеке < приоритета текущей операции
                     stack_oper.push(symbolFromExp); //Пихаем текущую операцию в stack_oper
                 } else {
-                    while (stack_oper.top().priority >= symbolFromExp.priority) { //Пока приоритет операции в стеке >= приоритета текущей операции
+                    while (!stack_oper.empty() && (stack_oper.top().priority >= symbolFromExp.priority)) { //Пока приоритет операции в стеке >= приоритета текущей операции
                         output_exp += stack_oper.top().symb; //Пихаем операции стека в выходдную строку
                         stack_oper.pop(); // Удаляем операцию из стека TODO CHECK
                     }
@@ -41,7 +43,7 @@ std::string convert(std::string input_exp) {
                                            symbolFromExp.priority)) { // Приоритет символа в стеке < symbolFromExp.priority
                     stack_oper.push(symbolFromExp);
                 } else {
-                    while (stack_oper.top().priority >= symbolFromExp.priority) {
+                    while (!stack_oper.empty() && (stack_oper.top().priority >= symbolFromExp.priority)) {
                         output_exp += stack_oper.top().symb;
                         stack_oper.pop();
                     }
@@ -61,7 +63,7 @@ std::string convert(std::string input_exp) {
     }
     output_exp += number;// Добовляем последнее число
 
-    while (!std::empty(stack_oper)) { //Пихаем в выходную строку оставшиеся элеметы стека
+    while (!stack_oper.empty()) { //Пихаем в выходную строку оставшиеся элеметы стека
         output_exp += stack_oper.top().symb;
         stack_oper.pop();
     }
