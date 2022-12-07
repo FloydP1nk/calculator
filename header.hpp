@@ -17,7 +17,6 @@ public :
 #define CALCULATOR_HEADER_HPP
 
 std::string check_and_fix(std::string input_exp);
-std::string trig_calc(std::string input_exp);
 std::string convert(std::string input_exp);
 double result_calc(std::string input_exp);
 

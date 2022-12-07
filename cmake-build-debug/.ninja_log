@@ -5,3 +5,10 @@
 1045	1170	1670449915493643859	calculator	8f2be911753b43db
 2	1096	1670448636606905604	CMakeFiles/calculator.dir/convert_to_reverse_polish_notation.cpp.o	545768354d10a733
 2	1043	1670449915345333816	CMakeFiles/calculator.dir/main.cpp.o	8dc9797f0d577138
+2	961	1670450472306186005	CMakeFiles/calculator.dir/check_and_fix_errors.cpp.o	271f2ff63e7c9d50
+1	962	1670450472312505370	CMakeFiles/calculator.dir/main.cpp.o	8dc9797f0d577138
+2	985	1670450472333280725	CMakeFiles/calculator.dir/convert_to_reverse_polish_notation.cpp.o	545768354d10a733
+3	986	1670450472333193433	CMakeFiles/calculator.dir/result_calculation.cpp.o	412e7732ea798e6
+986	1098	1670450472456463308	calculator	28d408c9f287e6cf
+2	1010	1670450518245363960	CMakeFiles/calculator.dir/main.cpp.o	8dc9797f0d577138
+1012	1171	1670450518418064294	calculator	28d408c9f287e6cf
