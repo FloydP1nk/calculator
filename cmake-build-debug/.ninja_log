@@ -12,3 +12,10 @@
 986	1098	1670450472456463308	calculator	28d408c9f287e6cf
 2	1010	1670450518245363960	CMakeFiles/calculator.dir/main.cpp.o	8dc9797f0d577138
 1012	1171	1670450518418064294	calculator	28d408c9f287e6cf
+2	741	1670452867115554978	CMakeFiles/calculator.dir/check_and_fix_errors.cpp.o	271f2ff63e7c9d50
+1	754	1670452867127563200	CMakeFiles/calculator.dir/main.cpp.o	8dc9797f0d577138
+2	790	1670452867159329351	CMakeFiles/calculator.dir/convert_to_reverse_polish_notation.cpp.o	545768354d10a733
+3	791	1670452867159927114	CMakeFiles/calculator.dir/result_calculation.cpp.o	412e7732ea798e6
+791	883	1670452867263998578	calculator	28d408c9f287e6cf
+2	1016	1670452961907569361	CMakeFiles/calculator.dir/check_and_fix_errors.cpp.o	271f2ff63e7c9d50
+1017	1130	1670452962042726203	calculator	28d408c9f287e6cf

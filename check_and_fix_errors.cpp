@@ -18,6 +18,7 @@ std::string check_and_fix(std::string input_exp) {
         input_exp.insert(2, 1, '-');
         input_exp.insert(3, 1, '1');
         input_exp.insert(4, 1, ')');
+        input_exp.insert(5, 1, '*');
     }
     int OpenBracketCount = 0, CloseBracketCount = 0; //Счетчики скобок
     for (size_t i = 0; i < input_exp.size(); i++) {
