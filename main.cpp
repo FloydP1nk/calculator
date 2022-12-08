@@ -4,25 +4,28 @@ int main() {
 
     std::string input_exp; //Исходное выражение
     std::cout << "Please enter expression" << std::endl;
-    //input_exp = "sin(x)*sin(x)+cos(x)*cos(x)";
-    std::cin >> input_exp;
+    //input_exp = "tg( x   )*tg( x)* cos(x)*cos(x) +c t g( x)*ct g (x )*si n (x )* s in (x)";
+    //std::cin >> input_exp;
+    getline(std::cin, input_exp);
 
-//    bool flag = false;
-//    for (size_t i = 0; i < input_exp.size(); ++i) {
-//        if (input_exp[i - 1] != 'e' && input_exp[i] == 'x' && input_exp[i + 1] != 'p') {
-//            flag = true;
-//        }
-//    }
-//    if (flag) {
-//        std::cout << "Please enter x" << std::endl;
-//        std::string x;
-//        std::cin >> x;
-//        for (size_t i = 0; i < input_exp.size(); ++i) {
-//            if (input_exp[i - 1] != 'e' && input_exp[i] == 'x' && input_exp[i + 1] != 'p') {
-//                input_exp.replace(i, x.size(), x);
-//            }
-//        }
-//    }
+    bool flag = false;
+    // Поиск переменной x
+    for (size_t i = 0; i < input_exp.size(); ++i) {
+        if (input_exp[i - 1] != 'e' && input_exp[i] == 'x' && input_exp[i + 1] != 'p') {
+            flag = true;
+        }
+    }
+    if (flag) { // Если x был найден
+        std::cout << "Please enter x" << std::endl;
+        std::string x;
+        std::cin >> x;
+        for (size_t i = 0; i < input_exp.size(); ++i) {
+            if (input_exp[i - 1] != 'e' && input_exp[i] == 'x' && input_exp[i + 1] != 'p') {
+                input_exp.erase(i,1);
+                input_exp.insert(i,x);
+            }
+        }
+    }
 
     input_exp = check_and_fix(input_exp); //Проверка выражения
     std::cout << "Выражение после проверки " << input_exp << std::endl;

@@ -35,8 +35,8 @@ double result_calc(std::string input_exp) {
             stack_num.pop();
             if (temp_symb == 's' || temp_symb == 'c') {
                 result = temp_symb == 's' ? sin(num) : cos(num);
-            } else {
-                result = temp_symb == 't' ? tan(num) : cos(num) / sin(num);
+            } else if (temp_symb == 't' || temp_symb == 'q'){
+                result = temp_symb == 't' ? tan(num) : cos(num)/sin(num);
             }
             stack_num.push(result);
             /// exp

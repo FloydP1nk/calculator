@@ -79,16 +79,14 @@ std::string convert(std::string input_exp) {
                 }
                 stack_oper.push(trig_func);
             }
-        } else if (input_exp[i] == 't' && input_exp[i + 1] == 'g') { /// tg
+        } else if (input_exp[i] == 't' && input_exp[i + 1] == 'g' && input_exp[i - 1] != 'c') { /// tg
             operations trig_func;
             trig_func.priority = 4;
             trig_func.symb = 't';
-            if (stack_oper.empty() || (stack_oper.top().priority <
-                                       trig_func.priority)) {
+            if (stack_oper.empty() || (stack_oper.top().priority < trig_func.priority)) {
                 stack_oper.push(trig_func);
             } else {
-                while (stack_oper.top().priority >=
-                       trig_func.priority) {
+                while (!stack_oper.empty() && stack_oper.top().priority >= trig_func.priority) {
                     output_exp += stack_oper.top().symb;
                     stack_oper.pop();
                 }
@@ -98,12 +96,10 @@ std::string convert(std::string input_exp) {
             operations trig_func;
             trig_func.priority = 4;
             trig_func.symb = 'q';
-            if (stack_oper.empty() || (stack_oper.top().priority <
-                                       trig_func.priority)) {
+            if (stack_oper.empty() || (stack_oper.top().priority < trig_func.priority)) {
                 stack_oper.push(trig_func);
             } else {
-                while (stack_oper.top().priority >=
-                       trig_func.priority) {
+                while (stack_oper.top().priority >= trig_func.priority) {
                     output_exp += stack_oper.top().symb;
                     stack_oper.pop();
                 }
@@ -116,8 +112,7 @@ std::string convert(std::string input_exp) {
             if (stack_oper.empty() || (stack_oper.top().priority < trig_func.priority)) {
                 stack_oper.push(trig_func);
             } else {
-                while (stack_oper.top().priority >=
-                       trig_func.priority) {
+                while (stack_oper.top().priority >= trig_func.priority) {
                     output_exp += stack_oper.top().symb;
                     stack_oper.pop();
                 }
