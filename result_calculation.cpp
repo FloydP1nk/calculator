@@ -29,7 +29,7 @@ double result_calc(std::string input_exp) {
                 result = temp_symb == '*' ? num1 * num2 : num1 / num2;
             }
             stack_num.push(result);
-            ///Вычисление тригонометрии
+            /// Вычисление тригонометрии
         } else if(temp_symb == 's' || temp_symb == 'c' || temp_symb == 't' || temp_symb == 'q') {
             double num = stack_num.top();
             stack_num.pop();
@@ -39,7 +39,14 @@ double result_calc(std::string input_exp) {
                 result = temp_symb == 't' ? tan(num) : cos(num) / sin(num);
             }
             stack_num.push(result);
+            /// exp
+        } else if (temp_symb == 'e') {
+            double num = stack_num.top();
+            stack_num.pop();
+            result = exp(num);
+            stack_num.push(result);
         }
+
     }
     result = stack_num.top();
     return result;

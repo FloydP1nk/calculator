@@ -56,12 +56,10 @@ std::string convert(std::string input_exp) {
             operations trig_func;
             trig_func.priority = 4;
             trig_func.symb = 's';
-            if (stack_oper.empty() || (stack_oper.top().priority <
-                                       trig_func.priority)) {
+            if (stack_oper.empty() || (stack_oper.top().priority < trig_func.priority)) {
                 stack_oper.push(trig_func);
             } else {
-                while (stack_oper.top().priority >=
-                       trig_func.priority) {
+                while (stack_oper.top().priority >= trig_func.priority) {
                     output_exp += stack_oper.top().symb;
                     stack_oper.pop();
                 }
@@ -71,8 +69,7 @@ std::string convert(std::string input_exp) {
             operations trig_func;
             trig_func.priority = 4;
             trig_func.symb = 'c';
-            if (stack_oper.empty() || (stack_oper.top().priority <
-                                       trig_func.priority)) {
+            if (stack_oper.empty() || (stack_oper.top().priority < trig_func.priority)) {
                 stack_oper.push(trig_func);
             } else {
                 while (stack_oper.top().priority >=
@@ -103,6 +100,20 @@ std::string convert(std::string input_exp) {
             trig_func.symb = 'q';
             if (stack_oper.empty() || (stack_oper.top().priority <
                                        trig_func.priority)) {
+                stack_oper.push(trig_func);
+            } else {
+                while (stack_oper.top().priority >=
+                       trig_func.priority) {
+                    output_exp += stack_oper.top().symb;
+                    stack_oper.pop();
+                }
+                stack_oper.push(trig_func);
+            }
+        } else if (input_exp[i] == 'e' && input_exp[i + 1] == 'x' && input_exp[i + 2] == 'p') {
+            operations trig_func;
+            trig_func.priority = 4;
+            trig_func.symb = 'e';
+            if (stack_oper.empty() || (stack_oper.top().priority < trig_func.priority)) {
                 stack_oper.push(trig_func);
             } else {
                 while (stack_oper.top().priority >=
