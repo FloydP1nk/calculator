@@ -4,7 +4,7 @@ int main() {
 
     std::string input_exp; //Исходное выражение
     std::cout << "Please enter expression" << std::endl;
-    //input_exp = "tg( x   )*tg( x)* cos(x)*cos(x) +c t g( x)*ct g (x )*si n (x )* s in (x)";
+    //input_exp = "(tg(x)*tg(x)*cos(x)*cos(x)+ctg(x)*ctg (x)*sin(x)*sin(x))*27/(12-3)"; основное триг. тождество * 3 = 3
     //std::cin >> input_exp;
     getline(std::cin, input_exp);
 

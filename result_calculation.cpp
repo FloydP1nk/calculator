@@ -46,7 +46,6 @@ double result_calc(std::string input_exp) {
             result = exp(num);
             stack_num.push(result);
         }
-
     }
     result = stack_num.top();
     return result;
